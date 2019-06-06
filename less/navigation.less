@@ -3,13 +3,25 @@
   nav {
     width: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     margin-top: @top-padding;
     .bottom-border();
 
-    .logo {
-      margin-left: 80px;
+
+
+    .nav-subset {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width:80%;
+      height: 70px;
+      margin: 0 10%;
+
+      @media @mobile {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+      }
     }
 
     .anchors {
@@ -17,15 +29,22 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      margin-right: 80px;
+
+      @media @mobile {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+      }
+
     }
 
     a {
       text-decoration: none;
-      font-color: @silver;
       font-size: 1.5rem;
       font-weight: bold;
+      color: @shark;
     }
+
 
 
      }

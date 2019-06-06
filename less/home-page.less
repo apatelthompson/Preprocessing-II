@@ -1,15 +1,21 @@
 .home {
 
+  @media @mobile {
+    width: 90%;
+  }
+
   header {
     .bottom-border();
-
-
     .hero-text {
       margin-top: @top-padding;
     }
 
-  }
+    @media @mobile {
+    .mobile-stack();
 
+    }
+
+  }
 
   .content-section {
     margin: 30px 0;
@@ -22,6 +28,11 @@
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+      .mobile-stack();
+
+      }
     }
 
     .img-content {
@@ -31,12 +42,21 @@
       img {
         border-radius: 10px;
       }
+
+      @media @mobile {
+      width: 100%;
+      }
     }
   }
 
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+
+    @media @mobile {
+      display: flex;
+      flex-direction: column-reverse;
+    }
 
     .text-content {
       padding-left: 1%;
@@ -46,12 +66,20 @@
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+
+      @media @mobile {
+      width: 100%;
+      }
     }
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+
+    @media @mobile {
+    width: 100%;
+    }
 
     img {
       border-radius: 10px;
@@ -64,9 +92,21 @@
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      width: 100%;
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      @media @mobile {
+        width: 80%;
+      }
 
     .btn {
       width: 80%;
@@ -77,10 +117,10 @@
       padding: 10px;
       display: flex;
       justify-content: center;
-    }
 
-    @media @mobile {
-      background-color: @button-bg;
+      @media @mobile {
+        background-color: @button-bg;
+      }
     }
 
     }
